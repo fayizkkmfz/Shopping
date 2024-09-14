@@ -28,7 +28,7 @@ function Register() {
           })
         }
         console.log("registratio successfully");
-        
+        window.location.href="/login"
         
       } catch (error) {
         console.log(error.message);
@@ -74,7 +74,7 @@ function Register() {
         Submit
       </Button>
     </Form>
-    <p className='text-end'><Link to={'/login'}>login</Link></p>
+    <p className='text-end'><Link to={'/'}>login</Link></p>
     </div>
   )
 }
