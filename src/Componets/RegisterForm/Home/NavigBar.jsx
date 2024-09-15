@@ -10,7 +10,7 @@ import { CartCondext } from '../../../App'
 import { Link } from 'react-router-dom'
 
 function NavigBar() {
-  const {CartCount,setCartCount} =useContext(CartCondext)
+  const {CartCount, setSearchText} =useContext(CartCondext)
   const [UserDetails, setUserDetails] = useState()
   const  handlelogout =async()=>{
     try {
@@ -40,13 +40,13 @@ function NavigBar() {
   }
   useEffect(()=>{
     fetchUserData()
-  },[fetchUserData])
+  },[])
   return (
     <div>
         <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid>
         <img className='logo' src={logo} alt="" />
-        <Navbar.Brand href="/">E-Shop</Navbar.Brand>
+        <Link to={'/'}> <Navbar.Brand>E-Shop</Navbar.Brand></Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -54,7 +54,6 @@ function NavigBar() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Top Products</Nav.Link>
           </Nav>
           <Form className="d-flex m-auto">
             <Form.Control
@@ -62,6 +61,7 @@ function NavigBar() {
               placeholder="Search"
               className="me-2"
               aria-label="Search"
+              onChange={(e)=>setSearchText(e.target.value)}
             />
             <Button variant="outline-success">Search</Button>
           </Form>

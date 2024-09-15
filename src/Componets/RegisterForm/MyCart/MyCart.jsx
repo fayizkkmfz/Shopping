@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { CartCondext } from '../../../App'
 import { Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 
 function MyCart() {
-    const {CartItems,OrderProduct, setOrderProduct} =useContext(CartCondext)
-    
+    const {CartItems, setOrderProduct,setNavigBarShow} =useContext(CartCondext)
+    setNavigBarShow(true)
     console.log(CartItems);
     const orderproduct=(orderitem)=>{
       

@@ -8,6 +8,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { auth } from './Componets/RegisterForm/Firebase';
 import MyCart from './Componets/RegisterForm/MyCart/MyCart';
 import Order from './Componets/RegisterForm/Order/Order';
+import NavigBar from './Componets/RegisterForm/Home/NavigBar';
 
 export const CartCondext =createContext()
 
@@ -16,6 +17,8 @@ function App() {
   const [CartItems, setCartItems] = useState([])
   const [user, setuser] = useState()
   const [OrderProduct, setOrderProduct] = useState({})
+  const [NavigBarShow, setNavigBarShow] = useState(false)
+  const [SearchText, setSearchText] = useState("")
   useEffect(()=>{
     auth.onAuthStateChanged((user)=>{
       setuser(user)
@@ -23,10 +26,12 @@ function App() {
   })
   return (
     <div>
-      <CartCondext.Provider value={{CartCount,setCartCount,CartItems, setCartItems,OrderProduct, setOrderProduct}}>
+      <CartCondext.Provider value={{setNavigBarShow,CartCount,setCartCount,CartItems, setCartItems,OrderProduct, setOrderProduct,SearchText, setSearchText}}>
 
       <BrowserRouter>
+      {NavigBarShow === true ? <NavigBar /> : "" }
       <Routes>
+        
         <Route path='/'element={user ? <Navigate to={"/home"} /> : <Login />}/>
         <Route path='/register'element={<Register />}/>
         <Route path='/mycart'element={<MyCart />}/>

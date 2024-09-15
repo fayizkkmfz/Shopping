@@ -2,10 +2,11 @@ import React, { useContext, useState } from 'react'
 import { CartCondext } from '../../../App'
 
 function Order() {
-    const {CartItems,OrderProduct, setOrderProduct} =useContext(CartCondext)
+    const {OrderProduct,setNavigBarShow} =useContext(CartCondext)
     const [Quantity, setQuantity] = useState(1)
     const [UpdatedPrice, setUpdatedPrice] = useState(OrderProduct.price)
     console.log(OrderProduct);
+    setNavigBarShow(true)
     const IncreaseQuantity=()=>{
         setQuantity(Quantity+1)
         setUpdatedPrice(UpdatedPrice+OrderProduct.price)

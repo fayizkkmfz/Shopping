@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
-import NavigBar from './NavigBar'
+
 import axios from 'axios'
-import { Button, Card, Table } from 'react-bootstrap'
+import { Button, Card} from 'react-bootstrap'
 import './Home.css'
 import { CartCondext } from '../../../App'
-import { useNavigate } from 'react-router-dom'
+
 
 function Home() {
-  const Navig=useNavigate()
-  const {CartCount,setCartCount,CartItems, setCartItems} =useContext(CartCondext)
+  
+  const {CartCount,setCartCount,CartItems, setCartItems,setNavigBarShow,SearchText} =useContext(CartCondext)
   const [Products, setProducts] = useState([])
   const API ='https://dummyjson.com/products'
 
@@ -24,17 +24,19 @@ function Home() {
       
     })
     
+    setNavigBarShow(true)
     
-    
-  }, [])
+  }, [setNavigBarShow])
   console.log(Products);
+  console.log(SearchText);
+  
   return (
     <div className='row'>
-    <NavigBar />
+    
          
 
         
-        {Products.map((product)=>{
+        {Products.filter((item)=>item.title.toLowerCase().includes(SearchText)).map((product)=>{
           return(
 
             <Card style={{ width: '18rem' }}>

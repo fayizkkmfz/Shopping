@@ -16,6 +16,7 @@ function Login() {
       console.log("user logged successfully");
       window.location.href = "/home"
       
+      
     } catch (error) {
       console.log(error.message);
       
