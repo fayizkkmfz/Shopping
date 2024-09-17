@@ -4,7 +4,7 @@ import './Register.css'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import { auth, db } from './Firebase'
 import { doc, setDoc } from 'firebase/firestore'
-import { Link } from 'react-router-dom'
+
 import { SiGmail } from "react-icons/si";
 import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
@@ -45,7 +45,7 @@ function Register() {
             <h5>E-SHOP</h5>
             <h1 className='welcome-text'>Welcome Back!</h1>
             <p>To keep connected with us <br />please login with your personal info</p>
-            <Link  className='login-link' to={'/'}> <Button variant="success">Login</Button> </Link>
+             <Button onClick={()=>window.location.href='/'} className='login-link' variant="success">Login</Button>
       </div>
 
       <div className='RegisterForm'>

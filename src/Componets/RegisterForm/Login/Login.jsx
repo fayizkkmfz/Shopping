@@ -49,7 +49,7 @@ function Login() {
     Login
   </Button>
 </Form>
-<p className='create-link'><Link  to={'/register'}>Create Account</Link></p>
+<p ><Link className='create-link' to={'/register'}>Create Account</Link></p>
 </div>
 
 </div>

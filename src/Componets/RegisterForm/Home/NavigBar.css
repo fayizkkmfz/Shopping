@@ -1,20 +1,51 @@
-.user-info{
-    margin-right: 50px;
+.user-icon{
+    margin-left: 30px;
+    height: 35px;
+    width: 35px;
+    color:  rgb(218, 41, 94);
 }
 .logo{
     width: 50px;
     height: 50px;
+    margin-left: 45px;
 }
 .cart-icon{
-    width: 60px;
-    height: 30px;
+    width: 30px;
+    height: 25px;
     
     
 }
 .cart-badge{
-    margin-left: 45px;
+    margin-left: 25px;
     width: 15px;
     height: 15px;
-    margin-bottom: -10px;
+    margin-bottom: -5px;
     padding: 2px;
+}
+.brand-head{
+    color: rgb(218, 41, 94);
+    margin-left: 1px;
+    font-size: 35px;
+    text-decoration: none;
+    font-weight: 900;
+    font-family:cursive;
+}
+.search{
+    display: flex;
+    margin-left: 400px;
+}
+.mycart-link{
+    text-decoration: none;
+    margin-left: 50px;
+    color:  rgb(218, 41, 94);
+    font-weight: 800;
+}
+.user-info{
+    font-weight: 800;
+}
+.mycart-drop{
+    text-decoration: none;
+
+    color:  rgb(218, 41, 94);
+    font-weight: 800
 }
