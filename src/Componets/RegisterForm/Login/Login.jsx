@@ -8,6 +8,7 @@ import { auth } from '../Firebase'
 function Login() {
   const [password,setpassword] = useState("")
   const [email, setemail] = useState("")
+  const [Error, setError] = useState("")
   
   const getIputValues=async(e)=>{
     e.preventDefault()
@@ -18,7 +19,7 @@ function Login() {
       
       
     } catch (error) {
-      console.log(error.message);
+      setError("invalid user");
       
       
     }
@@ -26,24 +27,31 @@ function Login() {
   }
  
   return (
+    <div className='register-backgroud'>
+
+    
     <div className='login-form'><Form onSubmit={getIputValues}>
-    <Form.Group className="mb-3">
-    <Form.Label> Email </Form.Label>
+      <h1 className='login-accont-text'>Login Acoount</h1>
+    <Form.Group className="login-input">
+  
     <Form.Control type="email" placeholder="Email" 
     onChange={(e)=>setemail(e.target.value)}
     />
   </Form.Group>
-  <Form.Group className="mb-3" >
-    <Form.Label>Password</Form.Label>
+  <Form.Group className="login-input" >
+    
     <Form.Control type="password" placeholder="Password" 
     onChange={(e)=>setpassword(e.target.value)}
     />
   </Form.Group>
-  <Button variant="primary" type="submit">
+  <h6>{Error}</h6>
+  <Button className='login-button' variant="primary" type="submit">
     Login
   </Button>
 </Form>
-<p className='text-end'><Link to={'/register'}>Create Account</Link></p>
+<p className='create-link'><Link  to={'/register'}>Create Account</Link></p>
+</div>
+
 </div>
   )
 }

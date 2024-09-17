@@ -1,7 +1,36 @@
 .login-form{
     width: 365px;
+    height: 500px;
     text-align: center;
-    margin-top: 110px;
+    margin-top: 60px;
     margin-left:400px;
+    background-image: url(https://img.freepik.com/free-psd/shopping-vertical-background_23-2150409471.jpg);
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-size: cover;
+}
+.login-input{
+    width: 260px;
+    margin-top: 30px;
+    margin-left: 40px;
     
+}
+.login-accont-text{
+    color: rgb(11, 11, 131);
+    margin-top: 80px;
+}
+.login-button{
+    margin-top: 40px;
+}
+a{
+    
+    color: rgb(255 255 255);
+    text-decoration: underline;
+    margin-left: 170px;
+}
+h6{
+    color: red;
+    text-align: start;
+    margin-left: 45px;
+    margin-top: 10px;
 }

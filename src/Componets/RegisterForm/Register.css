@@ -1,7 +1,74 @@
 .RegisterForm{
-    width: 365px;
+    background-color: rgb(255, 255, 255) ;
     text-align: center;
-    margin-top: 110px;
-    margin-left:400px;
+    margin-top: 60px;
+    height: 500px;
+    width: 700px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    padding-left: 40px;
+    padding-bottom: 60px;
+    padding-top: 50px;
+
+}
+.register-backgroud{
+    background-image: url(https://png.pngtree.com/background/20220819/original/pngtree-colorful-triangle-abstract-background-picture-image_1916038.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 615px;
+    display: flex;
+}
+.register-wallpaper{
+    text-align: center;
+    margin-top: 60px;
+    height: 500px;
+    width: 400px;
+    background-image: url(https://img.freepik.com/free-psd/shopping-vertical-background_23-2150409471.jpg);
+    margin-left: 100px;
+    border-radius: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    background-size: cover;
+}
+.register-form{
+    width: 300px;
+    margin-left: 160px;
+    margin-top: 60px;
     
+    
+}
+.login-link{
+    text-decoration: none;
+    margin-right: 170px;
+
+}
+.welcome-text{
+    margin-top: 120px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    
+}
+h5{
+    margin-top: 67px;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+}
+p{
+    font-weight: 600;
+    margin-top: 80px;
+}
+.create-accont-text{
+    color: green;
+    margin-right: 40px;
+}
+.login-icons{
+    width: 40px;
+    height: 30px;
+    margin-right: 10px;
+}
+.input{
+    padding: 10px;
 }
