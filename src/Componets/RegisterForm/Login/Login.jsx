@@ -44,7 +44,7 @@ function Login() {
     onChange={(e)=>setpassword(e.target.value)}
     />
   </Form.Group>
-  <h6>{Error}</h6>
+  <h6 className='error-msg'>{Error}</h6>
   <Button className='login-button' variant="primary" type="submit">
     Login
   </Button>

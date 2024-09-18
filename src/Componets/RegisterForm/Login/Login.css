@@ -28,7 +28,7 @@
     text-decoration: underline;
     margin-left: 170px;
 }
-h6{
+.error-msg{
     color: red;
     text-align: start;
     margin-left: 45px;

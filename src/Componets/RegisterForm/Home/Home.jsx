@@ -31,24 +31,30 @@ function Home() {
   console.log(SearchText);
   
   return (
-    <div className='row'>
-    
-         
+    <div className='home-bg'>
 
-        
+    
+    <div className='row' >
         {Products.filter((item)=>item.title.toLowerCase().includes(SearchText)).map((product)=>{
           return(
+            
 
-            <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src={product.thumbnail} />
+            
+
+            <Card className='cards'>
+      <Card.Img className='thumbnail' variant="top" src={product.thumbnail} />
       <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text>
-          {product.description}
-        </Card.Text>
-        <Button onClick={()=>AddToCart(product)} variant="primary">Add To Cart</Button>
+        <h2 className='card-title'>
+         {product.title}
+         </h2>
+         
       </Card.Body>
+      <h6 className='card-text'>
+         Price : $ {product.price}
+         </h6>
+      <Button className='addtocart-btn' onClick={()=>AddToCart(product)} variant="primary">Add To Cart</Button>
     </Card>
+    
 
         
             
@@ -56,6 +62,7 @@ function Home() {
           )
         })}
        
+    </div>
     </div>
   )
 }

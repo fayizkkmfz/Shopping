@@ -42,7 +42,7 @@ function Register() {
   return (
     <div className='register-backgroud'>
       <div className='register-wallpaper'>
-            <h5>E-SHOP</h5>
+            <h5 className='brand-name'>E-SHOP</h5>
             <h1 className='welcome-text'>Welcome Back!</h1>
             <p>To keep connected with us <br />please login with your personal info</p>
              <Button onClick={()=>window.location.href='/'} className='login-link' variant="success">Login</Button>
