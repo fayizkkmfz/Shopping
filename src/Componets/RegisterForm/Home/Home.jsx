@@ -52,7 +52,7 @@ function Home() {
       <h6 className='card-text'>
          Price : $ {product.price}
          </h6>
-      <Button className='addtocart-btn' onClick={()=>AddToCart(product)} variant="primary">Add To Cart</Button>
+      <Button variant="light" className='addtocart-btn' onClick={()=>AddToCart(product)}>Add To Cart</Button>
     </Card>
     
 

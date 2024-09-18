@@ -67,8 +67,8 @@ function NavigBar() {
           <>
             <CgProfile className='user-icon' />
             <NavDropdown className='user-info' title={UserDetails.Name} id="navbarScrollingDropdown" >
-              <NavDropdown.Item className='mycart-drop'>
-                Home
+              <NavDropdown.Item >
+              <Link className='mycart-drop' to={'/'}>Home</Link>
               </NavDropdown.Item>
               <NavDropdown.Item ><Link className='mycart-drop' to={'/mycart'}>MyCart</Link></NavDropdown.Item>
               <NavDropdown.Item className='mycart-drop' onClick={handlelogout}>

@@ -1,0 +1,26 @@
+.mycart-bg{
+     background-color: rgb(238, 234, 230);
+    text-align: center;
+}
+.cart-table{
+    width: 97%;
+    margin-left: 20px;
+    
+}
+.thumbnail{
+    height: 135px;
+    
+}
+.order-btn{
+    margin-top: 45px;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    background-color: rgb(218, 41, 94)
+}
+.mycart-head{
+    font-weight: 900;
+    font-family:'cursive';
+    color: rgb(218, 41, 94)
+
+}

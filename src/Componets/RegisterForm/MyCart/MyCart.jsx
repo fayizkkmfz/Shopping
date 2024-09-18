@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
 import { CartCondext } from '../../../App'
-import { Table } from 'react-bootstrap';
+import { Button, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
+import './mycart.css'
 
 function MyCart() {
     const {CartItems, setOrderProduct,setNavigBarShow} =useContext(CartCondext)
@@ -15,27 +16,32 @@ function MyCart() {
     }
     
   return (
-    <div>
-        <h1>My Cart</h1>
-        <Table striped bordered hover>
+    <div className='mycart-bg'>
+        <h1 className='mycart-head'>My-Cart</h1>
+        <Table className='cart-table'>
     <thead>
       <tr>
         <th>ITEM</th>
-        <th>Picture</th>
-        <th>Price</th>
+        <th>PICTURE</th>
+        <th>CATEGORY</th>
+        <th>PRICE</th>
+        <th></th>
       </tr>
     </thead>
+    <br />
     <tbody>
         {CartItems.map((item)=>{
             return(
 
-      
+            <>
       <tr>
         <td>{item.title}</td>
-        <td><img src={item.thumbnail} alt="" /></td>
+        <td><img className='thumbnail' src={item.thumbnail} alt="" /></td>
+        <td>{item.category}</td>
         <td>{item.price}</td>
-        <td><Link to={'/order'}><button onClick={()=>orderproduct(item)}>Oreder Now</button></Link></td>
-      </tr>
+        <td><Link to={'/order'}><Button variant="light" className='order-btn' onClick={()=>orderproduct(item)}>Oreder Now</Button></Link></td>
+      </tr><br />
+      </>
             )
         })}
     </tbody>
