@@ -1,0 +1,65 @@
+.order-bg{
+    display: flex;
+    margin-top: 20px;
+    
+}
+.order-img{
+   height: 450;
+   width: 550px;
+}
+.order-img-bg{
+    background-color: rgb(241, 224, 233);
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 450px;
+    
+}
+.order-details{
+    margin-left: 20px;
+    width:600px;
+    margin-top: 50px;
+}
+.order-description{
+    margin: 0px;
+    
+}
+
+.quantity-btn{
+    width: 30px;
+    height: 30px;
+    color: rgb(240, 55, 55);
+    margin: 5px;
+}
+.confirm-btn{
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    background-color: rgb(218, 41, 94);
+    width: 300px;
+}
+.price-div{
+    margin-left: 30px;
+    text-align: center;
+}
+.images{
+    width: 210px;
+    height: 200px;
+    border: 2px solid  rgb(241, 224, 233);
+    
+}
+.order-images{
+    display: flex;
+    
+}
+.review-div{
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.review-box{
+    border: 2px solid  rgb(241, 224, 233);
+    width: 75%;
+    margin-left: 180px;
+    margin-top: 10px;
+    background-color: rgb(250, 246, 248);
+}
