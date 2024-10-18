@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react'
 
 import axios from 'axios'
-import { Button, Card} from 'react-bootstrap'
+import { Button, Card, Form} from 'react-bootstrap'
 import './Home.css'
 import { CartCondext } from '../../../App'
 
 
 function Home() {
   
-  const {CartCount,setCartCount,CartItems, setCartItems,setNavigBarShow,SearchText} =useContext(CartCondext)
+  const {CartCount,setCartCount,CartItems, setCartItems,setNavigBarShow,SearchText, setSearchText} =useContext(CartCondext)
   const [Products, setProducts] = useState([])
   const API ='https://dummyjson.com/products'
 
@@ -32,10 +32,21 @@ function Home() {
   
   return (
     <div className='home-bg'>
-
+        <div className="search">
+        <Form >
+          <Form.Control
+            type="search"
+            placeholder="Search Product"
+            className="text-center"
+            aria-label="Search"
+            onChange={(e) => setSearchText(e.target.value)}
+          />
+          
+        </Form>
+        </div>
     
     <div className='row' >
-        {Products.filter((item)=>item.title.toLowerCase().includes(SearchText)).map((product)=>{
+        {Products.filter((item)=>item.title.includes(SearchText)).map((product)=>{
           return(
             
 

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { CartCondext } from '../../../App'
-import { Button, Table } from 'react-bootstrap';
+import { Button, Card, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom'
 import './mycart.css'
 
@@ -29,7 +29,7 @@ function MyCart() {
       </tr>
     </thead>
     <br />
-    <tbody>
+    <tbody className='tr'>
         {CartItems.map((item)=>{
             return(
 
@@ -45,7 +45,32 @@ function MyCart() {
             )
         })}
     </tbody>
-  </Table></div>
+  </Table>
+  <div className="mobile-view">
+  {CartItems.map((item)=>{
+            return(
+
+            <>
+
+  <Card className='cards'>
+      <Card.Img className='thumbnail' variant="top" src={item.thumbnail} />
+      <Card.Body>
+        <h2 className='card-title'>
+         {item.title}
+         </h2>
+         
+      </Card.Body>
+      <h6 className='card-text'>
+         Price : $ {item.price}
+         </h6>
+         <Link to={'/order'}><Button variant="light" className='order-btn' onClick={()=>orderproduct(item)}>Oreder Now</Button></Link>
+    </Card>
+    </>
+            )
+        })}
+
+  </div>
+  </div>
   )
 }
 

@@ -1,18 +1,34 @@
-import React, { useContext, useState } from 'react'
-import { Badge, Button, Form, Navbar, NavDropdown } from 'react-bootstrap'
-import { auth, db } from '../Firebase'
+import React, { useContext } from 'react'
+import { Badge, NavDropdown } from 'react-bootstrap'
+import { auth } from '../Firebase'
 import { useEffect } from 'react'
-import { doc, getDoc } from 'firebase/firestore'
+// import { doc, getDoc } from 'firebase/firestore'
 import './NavigBar.css'
 import logo from '../Home/shopping.png'
 import { FaCartPlus } from "react-icons/fa";
 import { CartCondext } from '../../../App'
 import { Link } from 'react-router-dom'
 import { CgProfile } from "react-icons/cg";
+import { HiOutlineBarsArrowDown } from "react-icons/hi2";
 
 function NavigBar() {
-  const { CartCount, setSearchText } = useContext(CartCondext)
-  const [UserDetails, setUserDetails] = useState()
+  const { CartCount} = useContext(CartCondext)
+  // const [UserDetails, setUserDetails] = useState()
+useEffect(() => {
+  const togglefunction =()=>{
+    navTools.classList.toggle('is-active')
+
+
+  }
+
+let toggleBar = document.querySelector('.togglebar')
+let navTools = document.querySelector('.nav-tools')
+
+toggleBar.addEventListener('click',togglefunction)
+}, [])
+
+  
+
 
   const handlelogout = async () => {
     try {
@@ -23,50 +39,52 @@ function NavigBar() {
     }
   }
 
-  const fetchUserData = async () => {
-    auth.onAuthStateChanged(async (user) => {
-      const docref = doc(db, "Users", user.uid)
-      const docsnap = await getDoc(docref)
-      if (docsnap.exists()) {
-        setUserDetails(docsnap.data())
-      } else {
-        console.log("user is not logged i");
-      }
-    })
-  }
+  // const fetchUserData = async () => {
+  //   auth.onAuthStateChanged(async (user) => {
+  //     const docref = doc(db, "Users", user.uid)
+  //     const docsnap = await getDoc(docref)
+  //     if (docsnap.exists()) {
+  //       setUserDetails(docsnap.data())
+  //     } else {
+  //       console.log("user is not logged i");
+  //     }
+  //   })
+  // }
 
-  useEffect(() => {
-    fetchUserData()
-  }, [])
+  // useEffect(() => {
+  //   fetchUserData()
+  // }, [])
 
   return (
-    <div>
-      <Navbar>
+    <>
+    <div className='nav-div '>
+    
+      
+    
+     <div className="logo-div">
         <img className='logo' src={logo} alt="" />
-        <Link className='brand-head' to={'/'}>E-Shop</Link>
-
-        <Form className="search">
-          <Form.Control
-            type="search"
-            placeholder="Search for Products"
-            className="me-2"
-            aria-label="Search"
-            onChange={(e) => setSearchText(e.target.value)}
-          />
-          <Button variant="outline-success">Search</Button>
-        </Form>
-
-        <Link className='mycart-link' to={'/mycart'}>MyCart</Link>
-        <div style={{ display: "flex", flexDirection: "column" }}>
+        <Link className='brand-head' to={'/home'}>E-Shop</Link>
+        </div>
+        <div className='cart-div'>
           <Badge className='cart-badge' bg="success">{CartCount}
           </Badge>
           <FaCartPlus className="cart-icon" />
         </div>
+        
+        
+      <div className="nav-tools">
+     
+      
+       <div className='mycart-link'>
+        <Link className='mycart-link' to={'/mycart'}>MyCart</Link>
 
-        {UserDetails ? (
-          <>
+       </div>
+       
+
+        {/* {UserDetails ? (
+            <> */}
             <CgProfile className='user-icon' />
-            <NavDropdown className='user-info' title={UserDetails.Name} id="navbarScrollingDropdown" >
+            <NavDropdown className='user-info' title="Fayiz" id="navbarScrollingDropdown" >
               <NavDropdown.Item >
               <Link className='mycart-drop' to={'/'}>Home</Link>
               </NavDropdown.Item>
@@ -75,12 +93,22 @@ function NavigBar() {
                 Logout
               </NavDropdown.Item>
             </NavDropdown>
+            {/* </> */}
+        {/* ) : (
+          <>
+          
+          <CgProfile className='user-icon' />
           </>
-        ) : (
-          <p>Loading.......</p>
         )}
-      </Navbar>
-    </div>
+     */}
+      
+        </div>
+    
+        <HiOutlineBarsArrowDown className='togglebar'/>
+      
+      </div>
+      
+      </>
   )
 }
 

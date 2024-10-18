@@ -12,7 +12,7 @@
     padding-top: 50px;
 
 }
-.register-backgroud{
+.register-background{
     background-image: url(https://png.pngtree.com/background/20220819/original/pngtree-colorful-triangle-abstract-background-picture-image_1916038.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -71,4 +71,51 @@ p{
 }
 .input{
     padding: 10px;
+}
+
+@media(max-width: 767px){
+    .register-background{
+        display: block;
+        width: auto;
+        margin-left: 0px;
+    }
+    .register-wallpaper{
+        display: none;
+        width: 300px;
+        margin: auto;
+        height: 400px;
+        
+    }
+    .RegisterForm{
+        width: 220px;
+        margin: auto;
+        margin-top: 10px;
+        margin-left: 0px;
+        height: 400px;
+    }
+    .register-form{
+        width: 260px;
+        margin-left: 0px;
+        height: 150px;
+        padding: 0px;
+        margin-top: 0px;
+        
+    }
+    .input{
+        width: 160px;
+        padding: 5px;
+    }
+    .create-accont-text{
+        font-size: 25px;
+    }
+    .login-icons{
+        margin: auto;
+        width: 30px;
+        height: 20px;
+    
+
+    }
+    .btn{
+        margin-top: 5px;
+    }
 }

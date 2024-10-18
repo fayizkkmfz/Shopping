@@ -32,7 +32,7 @@ function App() {
       {NavigBarShow === true ? <NavigBar /> : "" }
       <Routes>
         
-        <Route path='/'element={user ? <Navigate to={"/home"} /> : <Login />}/>
+        <Route path='/'element={ <Login />}/>
         <Route path='/register'element={<Register />}/>
         <Route path='/mycart'element={<MyCart />}/>
         <Route path='home'element={<Home />}/>

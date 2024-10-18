@@ -4,7 +4,7 @@
     
 }
 .order-img{
-   height: 450;
+   height: 550px;
    width: 550px;
 }
 .order-img-bg{
@@ -62,4 +62,50 @@
     margin-left: 180px;
     margin-top: 10px;
     background-color: rgb(250, 246, 248);
+}
+
+
+@media (max-width:767px){
+    .order-bg{
+        display: block;
+        margin-top: 20px;
+        
+    }
+    .order-details{
+        margin-left: 20px;
+        width:310px;
+        margin-top: 50px;
+    }
+    .order-img{
+        margin: auto;
+        height: 290px;
+        width: 370px;
+     }
+     .order-img-bg{
+    background-color: rgb(241, 224, 233);
+    margin-left: 20px;
+    border-radius: 5px;
+    height: 350px;
+    
+}
+.order-images{
+    display: block;
+    
+    
+}
+.images{
+    width: 210px;
+    height: 200px;
+    border: 2px solid  rgb(241, 224, 233);
+    margin: auto;
+    
+}
+.review-box{
+    border: 2px solid  rgb(241, 224, 233);
+    width: 370px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background-color: rgb(250, 246, 248);
+}
+
 }

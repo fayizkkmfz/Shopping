@@ -40,7 +40,7 @@ function Register() {
 
   }
   return (
-    <div className='register-backgroud'>
+    <div className='register-background'>
       <div className='register-wallpaper'>
             <h5 className='brand-name'>E-SHOP</h5>
             <h1 className='welcome-text'>Welcome Back!</h1>
@@ -84,10 +84,11 @@ function Register() {
             <Form.Control type="password" placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
-          </Form.Group>
-          <Button variant="primary" type="submit">
+            <Button className='btn' variant="primary" type="submit">
             Sign Up
           </Button>
+          </Form.Group>
+          
         </Form>
        
       </div>

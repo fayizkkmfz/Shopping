@@ -2,8 +2,8 @@
     width: 365px;
     height: 500px;
     text-align: center;
-    margin-top: 60px;
-    margin-left:400px;
+    margin-top: 60px !important;
+    margin: auto;
     background-image: url(https://img.freepik.com/free-psd/shopping-vertical-background_23-2150409471.jpg);
     border-radius: 10px;
     border: 1px solid rgb(0, 0, 0);
@@ -33,4 +33,28 @@
     text-align: start;
     margin-left: 45px;
     margin-top: 10px;
+}
+
+@media (max-width:767px){
+    .login-form{
+        margin:opx;
+        width: 250px;
+        height: auto;
+        margin-top: 60px;
+    }
+    .login-input{
+        padding: 5px;
+        margin: auto;
+        width: 130px;
+        
+    }
+    .create-link{
+        margin: auto;
+    }
+    .login-accont-text{
+        margin-top: 20px ;
+        font-size: 20px;
+    }
+    
+
 }

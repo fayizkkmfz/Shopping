@@ -1,4 +1,5 @@
 .mycart-bg{
+   
      background-color: rgb(238, 234, 230);
     text-align: center;
 }
@@ -19,6 +20,7 @@
     background-color: rgb(218, 41, 94)
 }
 .mycart-head{
+    
     font-weight: 900;
     font-family:'cursive';
     color: rgb(218, 41, 94)
@@ -27,4 +29,22 @@
 td{
     font-weight: 700;
     
+}
+.mobile-view{
+    display: none;
+
+}
+@media (max-width:767px){
+    .cart-table{
+        display: none;
+        
+        
+    }
+  .tr{
+    display: block;
+  }
+  .mobile-view{
+    display: block;
+
+}
 }
