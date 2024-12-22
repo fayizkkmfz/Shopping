@@ -87,23 +87,25 @@ p{
         
     }
     .RegisterForm{
-        width: 220px;
+        width: auto;
         margin: auto;
-        margin-top: 10px;
+        margin-top: auto;
         margin-left: 0px;
-        height: 400px;
+        height: 100%;
     }
     .register-form{
-        width: 260px;
-        margin-left: 0px;
+        width: auto;
+        margin: auto;
         height: 150px;
         padding: 0px;
-        margin-top: 0px;
+        margin-top: 50px;
         
     }
     .input{
-        width: 160px;
-        padding: 5px;
+        margin: auto;
+        width: 240px;
+        padding: 10px;
+        
     }
     .create-accont-text{
         font-size: 25px;
@@ -116,6 +118,6 @@ p{
 
     }
     .btn{
-        margin-top: 5px;
+        margin-top: 55px;
     }
 }

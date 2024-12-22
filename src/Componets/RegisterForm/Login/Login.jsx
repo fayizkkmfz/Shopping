@@ -29,14 +29,15 @@ function Login() {
   return (
 
 
-
+<div className='register-background'>
     <div className='login-form'><Form onSubmit={getIputValues}>
       <h1 className='login-accont-text'>Login Acoount</h1>
       <Form.Group className="login-input">
 
-        <Form.Control type="email" placeholder="fayizkkmfz@gmail.com"
+        <Form.Control type="email"  placeholder="Email"
           onChange={(e) => setemail(e.target.value)}
         />
+        <span>test : fayizkkmfz@gmail.com</span>
       </Form.Group>
       <Form.Group className="login-input" >
 
@@ -49,7 +50,8 @@ function Login() {
         Login
       </Button>
     </Form>
-      <p ><Link className='create-link' to={'/register'}>Create Account</Link></p>
+    <Link className='create-link' to={'/register'}><p >Create Account</p></Link>
+    </div>
     </div>
 
 

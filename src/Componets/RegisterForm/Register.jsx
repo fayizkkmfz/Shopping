@@ -8,6 +8,7 @@ import { doc, setDoc } from 'firebase/firestore'
 import { SiGmail } from "react-icons/si";
 import { IoLogoFacebook } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
+import { Link } from 'react-router-dom'
 
 function Register() {
   const [Name, setName] = useState("")
@@ -84,9 +85,9 @@ function Register() {
             <Form.Control type="password" placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button className='btn' variant="primary" type="submit">
+            <Link to="/"><Button className='btn' variant="primary" type="submit">
             Sign Up
-          </Button>
+          </Button></Link>
           </Form.Group>
           
         </Form>

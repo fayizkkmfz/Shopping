@@ -2,7 +2,7 @@
     width: 365px;
     height: 500px;
     text-align: center;
-    margin-top: 60px !important;
+  
     margin: auto;
     background-image: url(https://img.freepik.com/free-psd/shopping-vertical-background_23-2150409471.jpg);
     border-radius: 10px;
@@ -26,34 +26,37 @@
     font-size: 20px;
     color: rgb(255 255 255);
     text-decoration: underline;
-    margin-left: 170px;
+    margin-top: 15px;
 }
 .error-msg{
     color: red;
     text-align: start;
     margin-left: 45px;
-    margin-top: 10px;
+    margin-top:0px;
+    margin-bottom: 3px;
 }
 
 @media (max-width:767px){
     .login-form{
-        margin:opx;
-        width: 250px;
-        height: auto;
-        margin-top: 60px;
+        
+        width: auto;
+        height: 100%;
+       
     }
     .login-input{
+        
         padding: 5px;
         margin: auto;
-        width: 130px;
+        width: 200px;
         
     }
     .create-link{
         margin: auto;
     }
     .login-accont-text{
-        margin-top: 20px ;
+        margin-top: 90px ;
         font-size: 20px;
+        
     }
     
 

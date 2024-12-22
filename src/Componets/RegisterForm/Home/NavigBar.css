@@ -1,3 +1,4 @@
+
 .user-icon{
     margin-left: 30px;
     height: 35px;
@@ -53,8 +54,16 @@
     
 }
 .nav-div{
+    position:fixed;
+    top: 20px;
+    left:0;
+    right: 0;
     display: flex;
-    border: 1px solid rgb(218, 41, 94);
+    border: 1px solid rgba(218, 41, 94, 0.37);
+    z-index: 20;
+    width: 90%;
+    background-color: white;
+    margin: auto;
     
 }
 
@@ -62,7 +71,7 @@
     display: none;
     width: 70px;
     height: 40px;
-    margin-left: auto;
+    margin-right: 10px;
     
 }
 .user-info{
@@ -79,7 +88,16 @@
     margin-left: auto;
     margin-top: 0px;
 }
-
+.searchicon{
+    width: 70px;
+    height: 40px;
+    margin:auto;
+    position: fixed;
+    top: 10;
+    right: 0;
+    left: 0;
+    
+}
 @media(max-width:767px){
     .cart-div{
         margin-left: 0px;
@@ -123,14 +141,16 @@
     
 }
 .mycart-link{
+    display:flex;
     text-decoration: none;
     margin-left: 0px;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     color:  rgb(218, 41, 94);
     font-weight: 800;
     font-size: 25px;
 }
+
    
 
 }

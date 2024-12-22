@@ -5,11 +5,13 @@
 }
 .home-bg{
     background-color: rgb(238, 234, 230);
+    margin-top: 60px;
 }
 .cards{
+    margin:auto;
     margin-top: 10px;
     width: 18rem;
-    margin-left: 30px;
+    
     text-align: center;
     border: 1px dotted rgb(218, 41, 94);;
 }
@@ -35,4 +37,10 @@
     margin: auto;
     text-align: center;
     
+}
+.copyright{
+    text-align: center;
+    font-size: small;
+    color: rgb(218, 41, 94);
+    text-decoration: none;
 }

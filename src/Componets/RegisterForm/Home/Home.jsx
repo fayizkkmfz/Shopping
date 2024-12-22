@@ -4,6 +4,7 @@ import axios from 'axios'
 import { Button, Card, Form} from 'react-bootstrap'
 import './Home.css'
 import { CartCondext } from '../../../App'
+import { Link } from 'react-router-dom'
 
 
 function Home() {
@@ -73,6 +74,7 @@ function Home() {
           )
         })}
        
+    <Link className='copyright' to="https://www.linkedin.com/in/fayiz-kk/" target="_blank"><span>Developed By &copy; fayizkk</span></Link>
     </div>
     </div>
   )

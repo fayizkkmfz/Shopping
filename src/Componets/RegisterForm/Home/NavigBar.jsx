@@ -10,6 +10,7 @@ import { CartCondext } from '../../../App'
 import { Link } from 'react-router-dom'
 import { CgProfile } from "react-icons/cg";
 import { HiOutlineBarsArrowDown } from "react-icons/hi2";
+import { FcSearch } from "react-icons/fc";
 
 function NavigBar() {
   const { CartCount} = useContext(CartCondext)
@@ -56,7 +57,8 @@ toggleBar.addEventListener('click',togglefunction)
   // }, [])
 
   return (
-    <>
+    
+    <nav>
     <div className='nav-div '>
     
       
@@ -65,12 +67,11 @@ toggleBar.addEventListener('click',togglefunction)
         <img className='logo' src={logo} alt="" />
         <Link className='brand-head' to={'/home'}>E-Shop</Link>
         </div>
-        <div className='cart-div'>
+        <Link style={{color:"black"}} to={'/mycart'}> <div className='cart-div'>
           <Badge className='cart-badge' bg="success">{CartCount}
           </Badge>
           <FaCartPlus className="cart-icon" />
-        </div>
-        
+        </div></Link>
         
       <div className="nav-tools">
      
@@ -79,6 +80,7 @@ toggleBar.addEventListener('click',togglefunction)
         <Link className='mycart-link' to={'/mycart'}>MyCart</Link>
 
        </div>
+     
        
 
         {/* {UserDetails ? (
@@ -86,9 +88,9 @@ toggleBar.addEventListener('click',togglefunction)
             <CgProfile className='user-icon' />
             <NavDropdown className='user-info' title="Fayiz" id="navbarScrollingDropdown" >
               <NavDropdown.Item >
-              <Link className='mycart-drop' to={'/'}>Home</Link>
+              <Link className='mycart-drop' to={'/home'}>Home</Link>
               </NavDropdown.Item>
-              <NavDropdown.Item ><Link className='mycart-drop' to={'/mycart'}>MyCart</Link></NavDropdown.Item>
+              <NavDropdown.Item ><Link className='mycart-drop' to={'/register'}>Register</Link></NavDropdown.Item>
               <NavDropdown.Item className='mycart-drop' onClick={handlelogout}>
                 Logout
               </NavDropdown.Item>
@@ -101,14 +103,14 @@ toggleBar.addEventListener('click',togglefunction)
           </>
         )}
      */}
-      
+   
         </div>
-    
+        
         <HiOutlineBarsArrowDown className='togglebar'/>
-      
+      <a href='/home'> <FcSearch className='searchicon' /> </a> 
       </div>
       
-      </>
+      </nav>
   )
 }
 
